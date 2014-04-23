@@ -12,8 +12,8 @@ begin
 #results = client.query("SELECT * FROM employees WHERE gender='f' LIMIT 25, 5")
 #results = client.query("SELECT * FROM employees WHERE gender='f' LIMIT 25, 5")
 #results = client.query("SELECT * FROM employees UNION all SELECT * from salaries LIMIT 25, 5")
-results = client.query("SELECT * FROM employees LIMIT 0, 5")
-results = client.query("select employees.emp_no,employees.first_name,employees.last_name,salaries.salary from employees, salaries where employees.emp_no = salaries.emp_no LIMIT 100,1000")
+#results = client.query("SELECT * FROM employees LIMIT 0, 5")
+results = client.query("select employees.emp_no,employees.first_name,employees.last_name,salaries.salary from employees, salaries where employees.emp_no = salaries.emp_no LIMIT 100,10")
 
 
 #results.count
@@ -30,7 +30,7 @@ results = client.query("select employees.emp_no,employees.first_name,employees.l
 results.each do |val| 
 #	logFile = File.open(fname, "a")	
 #    logFile.puts "#{val['first_name']}, #{val['last_name']}, #{val['birth_date']}, #{val['emp_no']}" 
-    puts "#{val['first_name']}, #{val['last_name']}, #{val['birth_date']}, #{val['emp_no']}" 
+    puts "#{val['first_name']}, #{val['last_name']}, #{val['emp_no']}" 
 #	logFile.close
 	end
 
