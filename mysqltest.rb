@@ -4,8 +4,8 @@ require 'mysql2'
 require 'json'
 
 begin
-#	client = Mysql2::Client.new(:host => 'walrussy.net', :database => 'employees', :username => "root", :password => "FunkyFiddlesticks")
-	client = Mysql2::Client.new(:host => 'walrussy.net', :database => 'employees', :username => "jrat", :password => "WorldBookEncyclopedia")
+#	client = Mysql2::Client.new(:host => 'walrussy.net', :database => 'employees', :username => "root", :password => "XXX")
+	client = Mysql2::Client.new(:host => 'walrussy.net', :database => 'employees', :username => "XXX", :password => "XXX")
 
 #results = client.query("SELECT * FROM employees WHERE gender='f'")
 #results = client.query("SELECT * FROM employees WHERE gender='f' LIMIT 0, 10")
