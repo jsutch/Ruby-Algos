@@ -1,14 +1,13 @@
 #!/usr/bin/env ruby
-
+# === equivilent to the == operator for strings
 print "Enter your grade: "
 grade = gets.chomp
-case grade
-when "A"
+if "A" === grade
   puts 'Well done!'
-when "B"
+elsif "B" === grade
   puts 'Try harder!'
-when "C"
+elsif "C" === grade
   puts 'You need help!!!'
 else
-  puts "You\'re just making it up!"
+  puts "You just making it up!"
 end
