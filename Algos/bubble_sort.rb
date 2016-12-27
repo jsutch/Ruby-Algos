@@ -9,35 +9,24 @@ def makeRandomNumArray(iter)
 	end
 
 
-myarray = makeRandomNumArray(5)
+myarray = makeRandomNumArray(15)
 
 # puts "Original Array", myarray.inspect
-# PP.pp(myarray)
+PP.pp(myarray)
 
-arraySize = myarray.length
-arraySize1 = arraySize
-indexTrim = arraySize1 - 1
+a = myarray
+n = myarray.length
 temp = ""
-puts arraySize
-puts indexTrim
-puts "done"
 
-arraySize.downto(0) do |loop|
-  # puts "loop is #{loop}"
-  loop -= 1
-  for idx in 0..indexTrim
-  	num = myarray[idx]
-  	num1 = num
-  	# next = num1 += 1
-  	# puts idx
-    if myarray[idx] > myarray[idx + 1]
-    	puts "Larger"
-    end
-    idx -= 1
+(n-1).downto(0) do |loop|
+  for x in 0..(n) do
+  	unless a[x+1] == nil
+	    if a[x] > a[x+1]
+	    	temp = a[x]
+	    	a[x] = a[x+1]
+	    	a[x+1] = temp
+	    end
+	end
   end
 end
-
-
-
-
-# PP.pp(myarray)
+PP.pp(myarray)
