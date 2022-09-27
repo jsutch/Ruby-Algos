@@ -19,3 +19,7 @@ end
 puts "array index"
 puts my_array[2]
 
+
+for x in 1..10 do
+	print x
+end
